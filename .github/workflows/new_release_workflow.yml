@@ -13,6 +13,9 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Perform actions on a new release
-      run: |
-        echo "Hello, World!"
+    - name: create an issue
+      uses: dacbd/create-issue-action@main
+      with:
+        token: ghs_LoF1SHU2vZJwHPozQUH8OtfHJ2Joc40ZQGwl
+        title: Simple test issue from a new release
+        body: my new issue fom a new release
