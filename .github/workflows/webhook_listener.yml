@@ -1,0 +1,21 @@
+name: Webhook Listener
+
+on:
+  push:
+    branches:
+      - main  # Change this to the branch you want to trigger the webhook on
+
+jobs:
+  webhook-listener:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Run your webhook processing script
+      run: |
+        # Add your webhook processing script here.
+        # You can execute your script or commands in this section.
+        # For example:
+        # python webhook_listener.py
