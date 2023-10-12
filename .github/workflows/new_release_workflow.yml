@@ -12,15 +12,12 @@ jobs:
       contents: read
       issues: write
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-
     - name: create an issue
       #uses: dacbd/create-issue-action@main
-      #with:
-       # token: ${{ secrets.GITHUB_TOKEN }}
+      run: gh issue create --title "I found a buggs" --body "Nothing"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         #title: Simple test issue from a new release
         #body: my new issue fom a new release
-      run: |
-        gh issue create --title "I found a buggs" --body "Nothing"
+
           
