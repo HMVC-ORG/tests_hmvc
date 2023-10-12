@@ -16,8 +16,11 @@ jobs:
       uses: actions/checkout@v2
 
     - name: create an issue
-      uses: dacbd/create-issue-action@main
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        title: Simple test issue from a new release
-        body: my new issue fom a new release
+      #uses: dacbd/create-issue-action@main
+      #with:
+       # token: ${{ secrets.GITHUB_TOKEN }}
+        #title: Simple test issue from a new release
+        #body: my new issue fom a new release
+      run: |
+        gh issue create --title "I found a buggs" --body "Nothing"
+          
