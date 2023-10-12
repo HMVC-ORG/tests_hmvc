@@ -12,6 +12,9 @@ jobs:
       contents: read
       issues: write
     steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
     - name: create an issue
       #uses: dacbd/create-issue-action@main
       run: gh issue create --title "I found a buggs" --body "Nothing"
